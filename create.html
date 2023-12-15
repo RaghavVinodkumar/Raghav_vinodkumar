@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .contact-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #createContactBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+        }
+
+        #copyright {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Contact Management</h1>
+    <ul class="contact-list" id="contactList">
+        <!-- Empty contact list -->
+    </ul>
+    <button id="createContactBtn" onclick="createContact()">Create New Contact</button>
+</div>
+
+<div id="copyright">
+    &copy; 2023 Your Name - All Rights Reserved
+</div>
+
+<script>
+    function createContact() {
+        alert("Functionality to create a new contact will be implemented here.");
+    }
+</script>
+
+</body>
+</html>

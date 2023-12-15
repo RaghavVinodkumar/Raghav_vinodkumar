@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Management App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        #container {
+            text-align: center;
+        }
+        #contact-list {
+            list-style: none;
+            padding: 0;
+        }
+        #create-contact-btn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #copyright {
+            position: fixed;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+        }
+    </style>
+/<head>
+<body>
+    <div id="container">
+        <h2>Contact List</h2>
+        <a href="{% url 'contact_list' %}"> <button type="button"></button>
+        <a href="{% url 'edit_contact' contact.id %}"> <button type="button"></button>
+            <a href="{% url 'delete_contact' contact.id %}"><button type="button" class="btn btn-danger">Delete Contact</button></a>
+            <table class="table table-bordered my-3">
+                <tr>
+                    <th>Contact Name</th>
+                    <!-- TODO: Implement the CONTACT_NAME  -->
+                    <td>{{ contact.name }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <!-- TODO: Implement the CONTACT_EMAIL  -->
+                    <td>{{ contact.email }}</td>
+                </tr>
+                <tr>
+                    <th>Contact Notes</th>
+                    <!-- TODO: Implement the CONTACT_NOTES  -->
+                    <td>{{ contact.notes }}</td>
+                </tr>
+                <tr>
+                    <th>Created Time</th>
+                    <!-- TODO: Implement the CONTACT_CREATED_AT  -->
+                    <td>{{ contact.created_at }}</td>
+                </tr>
+            </table>
+        <ul id="contact-list">
+            <!-- Display contacts here (initially empty) -->
+        </ul>
+        <button id="create-contact-btn" onclick="createContact()">Create New Contact</button>
+    </div>
+    <div id="copyright">
+        &copy; raghav vinodkumar 2023
+    </div>
+
+    <script>
+        function createContact() {
+            // Implement logic to create a new contact
+            alert("Implement logic to create a new contact!");
+        }
+    </script>
+</body>
+</html>
